@@ -11,5 +11,5 @@ class NoticiasG1Spider(scrapy.Spider):
         pass
 
 
-class NoticiasG1Spider(scrapy.Spider):
+class NoticiasUOlSpider(scrapy.Spider):
     pass

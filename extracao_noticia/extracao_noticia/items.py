@@ -17,3 +17,4 @@ class ExtracaoNoticiaItem(scrapy.Item):
     autor_reportagem = scrapy.Field(serialize=List[str])
     texto_noticia = scrapy.Field(serialize=List[str])
     subtitulo = scrapy.Field(serialize=str)
+    site = scrapy.Field(serialize=str)
