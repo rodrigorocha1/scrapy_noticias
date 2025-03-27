@@ -40,9 +40,10 @@ for noticia in response.css('p.bullet').getall():
 Teste escolhido
 
 for noticia in response.css('p.bullet'):
-...     texto = noticia.css('::text').getall()
-...     print("".join(texto).strip())
-...     print()
+    texto = noticia.css('::text').getall()
+    if "Reuters" in texto or "Por " in texto:
+        continue
 
-
+    print("".join(texto).strip())
+    print()
 
