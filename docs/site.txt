@@ -1,0 +1,48 @@
+https://rss.uol.com.br/feed/tecnologia.xml
+https://g1.globo.com/dynamo/sp/ribeirao-preto-franca/rss2.xml
+
+https://www.uol.com.br/tilt/noticias/reuters/2025/03/26/startup-de-navegadores-corporativos-e-avaliada-em-us48-bi-em-nova-rodada-de-financiamento.htm
+
+UOL
+TITULO = response.css('title::text').get()
+TEXTO = response.css('p.bullet::text').getall()
+scrapy shell https://www.uol.com.br/tilt/noticias/reuters/2025/03/26/startup-de-navegadores-corporativos-e-avaliada-em-us48-bi-em-nova-rodada-de-financiamento.htm
+-----------------=---------------------------------------------
+Op 2
+scrapy shell https://www.uol.com.br/tilt/noticias/redacao/2025/03/26/funcao-whastapp-e-spotify.htm
+response.css('div.jupiter-paragraph-fragment').getall()
+
+Selector(text=teste_string).xpath('//p/text()').getall()
+
+for noticia in response.css('div.jupiter-paragraph-fragment').getall():
+
+from scrapy.selector import Selector
+
+
+for noticia in response.css('div.jupiter-paragraph-fragment').getall():
+    texto_for = Selector(text=noticia).xpath('//p/text()').getall()
+    print(texto_for)
+    print()
+    print()
+//p[@class='bullet']/text()
+/html/body/div[1]/main/article/div/div/div/div/div/p/text()
+
+==========================================================+
+op3
+response.css('p.bullet span.topicText strong::text').getall()
+response.css('p.bullet::text').getall()
+====================================================================
+Outro teste
+for noticia in response.css('p.bullet').getall():
+...     print(noticia)
+...     print()
+================================================================
+Teste escolhido
+
+for noticia in response.css('p.bullet'):
+...     texto = noticia.css('::text').getall()
+...     print("".join(texto).strip())
+...     print()
+
+
+
